@@ -23,6 +23,6 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/adwktt/adwktt.git"
-          source_branch: "main"
+          source_branch: "master"
           destination_branch: "sync-adwktt-JavaScript"
           github_token: ${{ secrets.ZYT }}
