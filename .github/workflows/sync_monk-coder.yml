@@ -1,12 +1,12 @@
-name: sync-adwktt-Script
+name: sync-monk-coder-Script
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
   watch:
     types: started
   repository_dispatch:
-    types: sync-adwktt-JavaScript
+    types: sync-monk-coder-JavaScript
 jobs:
   repo-sync:
     env:
@@ -22,7 +22,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/adwktt/adwktt.git"
-          source_branch: "master"
-          destination_branch: "sync-adwktt-JavaScript"
+          source_repo: "https://github.com/monk-coder/dust.git"
+          source_branch: "dust"
+          destination_branch: "sync-monk-coder-JavaScript"
           github_token: ${{ secrets.ZYT }}
