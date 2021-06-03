@@ -1,7 +1,7 @@
-name: sync-CXK-Script
+name: sync-longzhuzhu-Script
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -22,7 +22,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/xiaokxiansheng/js.git"
-          source_branch: "master"
-          destination_branch: "sync-CXK-JavaScript"
+          source_repo: "https://github.com/leecheng310/longzhuzhu.git"
+          source_branch: "main"
+          destination_branch: "sync-longzhuzhu-JavaScript"
           github_token: ${{ secrets.ZYT }}
