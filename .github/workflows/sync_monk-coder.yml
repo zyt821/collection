@@ -1,4 +1,4 @@
-name: sync-monk-coder-Script
+name: sync-zoo-Script
 on:
   schedule:
     - cron: '*/30 * * * *'
@@ -22,7 +22,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/monk-coder/dust.git"
-          source_branch: "dust"
-          destination_branch: "sync-monk-coder-JavaScript"
+          source_repo: "https://github.com/zooPanda/zoo.git"
+          source_branch: "dev"
+          destination_branch: "sync-zoo-JavaScript"
           github_token: ${{ secrets.ZYT }}
